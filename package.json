@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch src --exec babel-node ./src/index.js",
-    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write --trailing-comma all",
-      "eslint --fix",
+      "./node_modules/.bin/eslint --fix ./src",
       "git add"
     ]
   },
