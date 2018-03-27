@@ -2,7 +2,7 @@ import express from "express    ";
 
 const app =    express()  ;
 
-app.listen(5555, () =>    {
+app.listen(5555, () =>      {
   console.log("Express server started at port 5555");
 });
 
